@@ -11,7 +11,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     border-bottom: 3px solid #eee;
-    gap: 20px;
     padding: 20px;;
 }
 
