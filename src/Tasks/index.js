@@ -3,7 +3,8 @@ import "./style.css";
 const Tasks = (props) => (
   <ul className="list">
     {props.tasks.map(task => (
-      <li key={task.id}
+      <li
+        key={task.id}
         className={`list__item${task.done && props.hideDoneTasks ? " list__item--hidden" : ""}`}
       >
         <button className="task__checkButton task__checkButton--true">
@@ -19,7 +20,7 @@ const Tasks = (props) => (
         <button className="task__removeButton">🗑</button>
       </li>
     ))}
-  </ul >
+  </ul>
 );
 
 export default Tasks;
