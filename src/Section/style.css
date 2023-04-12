@@ -1,26 +1,26 @@
 .section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    background-color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 39px 0px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 39px 0px;
 }
 
 .section__header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border-bottom: 3px solid #eee;
-    padding: 20px;;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 3px solid #eee;
+  padding: 20px;
 }
 
 .section__title {
-    margin: 0px;
-    font-size: 20px;
-    font-weight: 800;
-    flex-grow: 1;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 800;
+  flex-grow: 1;
 }
 
 .section__body {
-    padding: 20px;
+  padding: 20px;
 }
