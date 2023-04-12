@@ -1,22 +1,22 @@
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 20px;
 }
 
 .buttons__button {
-    background-color: transparent;
-    color: teal;
-    border: none;
-    transition: 100ms;
+  background-color: transparent;
+  color: teal;
+  border: none;
+  transition: 100ms;
 }
 
 .buttons__button:hover {
-    color: hsl(180, 100%, 30%);
-    transition: 100ms;
+  color: hsl(180, 100%, 30%);
+  transition: 100ms;
 }
 
 .buttons__button:disabled {
-    color: grey;
+  color: grey;
 }
