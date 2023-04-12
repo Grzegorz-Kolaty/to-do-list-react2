@@ -4,7 +4,7 @@
 This website has only one specific function, look:
 👆 https://grzegorz-kolaty.github.io/to-do-list-react2/ 👆
 
-<img src="%PUBLIC_URL%/images/how_to_use.gif" alt="howToUse" width="600"/>
+<img src="public/images/how_to_use.gif" alt="howToUse" width="600"/>
 
 ## 🧑 Do not forget to see my homepage❕
 My homepage 👆 https://grzegorz-kolaty.github.io/homepage/ 👆
