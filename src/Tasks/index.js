@@ -1,26 +1,37 @@
 import "./style.css";
 
-const Tasks = (props) => (
-  <ul className="list">
-    {props.tasks.map((task) => (
-      <li
-        key={task.id}
-        className={`list__item${
-          task.done && props.hideDoneTasks ? " list__item--hidden" : ""
-        }`}
-      >
-        <button className="task__checkButton task__checkButton--true">
-          {task.done ? "✔" : ""}
-        </button>
+const deleteTask = (name) => {
+  console.log(`Nazwa zadania do usunięcia:  ${name}`)
+}
 
-        <span className={`task__item${task.done ? " list__item--done" : ""}`}>
-          {task.content}
-        </span>
+const Tasks = ({ tasks, hideDone }) => {
+  return (
+    <ul className="list">
+      {tasks.map((task) => (
+        <li
+          key={task.id}
+          className={`list__item${task.done && hideDone ? " list__item--hidden" : ""
+            }`}
+        >
+          <button
+            className="task__checkButton task__checkButton--true"
+          >
+            {task.done ? "✔" : ""}
+          </button>
 
-        <button className="task__removeButton">🗑</button>
-      </li>
-    ))}
-  </ul>
-);
+          <span className={`task__item${task.done ? " list__item--done" : ""}`}>
+            {task.content}
+          </span>
+
+          <button
+            className="task__removeButton"
+            onClick={() => deleteTask(task.content)}
+          >
+            🗑</button>
+        </li>
+      ))}
+    </ul>
+  )
+};
 
 export default Tasks;
