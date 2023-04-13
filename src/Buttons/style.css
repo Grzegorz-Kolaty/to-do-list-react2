@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -19,4 +20,11 @@
 
 .buttons__button:disabled {
   color: grey;
+}
+
+@media (max-width: 900px) {
+  .buttons {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
 }
