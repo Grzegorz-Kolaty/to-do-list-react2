@@ -11,6 +11,7 @@
   color: teal;
   border: none;
   transition: 100ms;
+  font-weight: 600;
 }
 
 .buttons__button:hover {
