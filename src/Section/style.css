@@ -14,6 +14,12 @@
   padding: 20px;
 }
 
+.section__subtitle {
+  font-weight: 400;
+  font-size: medium;
+  margin: 0px;
+}
+
 .section__title {
   margin: 0px;
   font-size: 20px;

@@ -13,12 +13,17 @@ function App() {
     { id: 2, content: "zjeść obiad", done: true },
   ]);
 
+  const [taskCount, setTaskCount] = useState(tasks.length);
+  const taskDoneCount = tasks.filter(task => task.done === true).length;
+  const taskHideDoneCount = tasks.filter(task => task.done === true && hideDone === true).length;
+
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
+    setTaskCount(taskCount => taskCount - 1);
   };
 
   const toggleTaskDone = (id) => {
@@ -47,6 +52,7 @@ function App() {
           id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
         }
       ]);
+      setTaskCount(taskCount => taskCount + 1);
     }
   };
 
@@ -56,7 +62,8 @@ function App() {
       <Section title="Dodaj nowe zadanie"
         body={<Form addNewTask={addNewTask} />} />
       <Section
-        title="Lista zadań"
+        title={`Lista zadań (${taskCount})`}
+        subtitle={`Wykonane: ${taskDoneCount}`}
         body={
           <Tasks
             tasks={tasks}
@@ -68,6 +75,7 @@ function App() {
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
+            subtitle={taskHideDoneCount > 0 ? `Zadań ukrytych: ${taskHideDoneCount}` : ""}
             toggleHideDone={toggleHideDone}
             setAllDone={setAllDone}
           />}
@@ -75,5 +83,6 @@ function App() {
     </Container>
   );
 };
+
 
 export default App;
