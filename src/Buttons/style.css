@@ -6,6 +6,12 @@
   gap: 20px;
 }
 
+.buttons__hiding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .buttons__button {
   background-color: transparent;
   color: teal;

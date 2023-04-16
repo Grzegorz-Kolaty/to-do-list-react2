@@ -63,7 +63,7 @@ function App() {
         body={<Form addNewTask={addNewTask} />} />
       <Section
         title={`Lista zadań (${taskCount})`}
-        subtitle={`Wykonane: ${taskDoneCount}`}
+        subtitle={taskDoneCount > 0 ? `Ukończone: ${taskDoneCount}` : "Nie ukończono żadnego zadania!"}
         body={
           <Tasks
             tasks={tasks}

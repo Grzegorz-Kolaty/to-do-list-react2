@@ -5,13 +5,14 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone, subtitle }) => (
   <div className="buttons">
     {tasks.length > 0 && (
       <>
-        <button
-          onClick={toggleHideDone}
-          className="buttons__button">
-          {hideDone ? "Pokaż" : "Ukryj"} ukończone
-          <br />
+        <div className="buttons__hiding">
+          <button
+            onClick={toggleHideDone}
+            className="buttons__button">
+            {hideDone ? "Pokaż" : "Ukryj"} ukończone
+          </button>
           {subtitle}
-        </button>
+        </div>
         <button
           onClick={setAllDone}
           className="buttons__button"
