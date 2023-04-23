@@ -5,7 +5,7 @@
 This website has only one specific function, look:
 👆 https://grzegorz-kolaty.github.io/to-do-list-react2/ 👆
 
-<img src="public/images/how_to_use.gif" alt="howToUse" width="600"/>
+<img src="public/images/how_to_use.gif" alt="howToUse" width="900"/>
 
 ## 🧑 Do not forget to see my homepage❕
 
@@ -15,7 +15,7 @@ Please do not forget to check my other projects on my homepage - trying to be be
 
 ## ⚒ My work
 
-Currency converter 👆 https://grzegorz-kolaty.github.io/currency-converter/ 👆
+Currency converter 👆 https://grzegorz-kolaty.github.io/currency-converter-react/ 👆
 
 ## ⚙ Used technologies and languages
 
