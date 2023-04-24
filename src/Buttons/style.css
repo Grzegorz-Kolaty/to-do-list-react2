@@ -1,24 +1,8 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons__hiding {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-}
-
-.buttons__done {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  text-align: center;
 }
 
 .buttons__button {
@@ -38,9 +22,12 @@
   color: grey;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .buttons {
+    flex-direction: column;
     flex-basis: 100%;
+  }
+  .buttons__button {
     margin-top: 20px;
   }
 }

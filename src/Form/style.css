@@ -24,7 +24,7 @@
   background-color: hsl(180, 100%, 30%);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .form__input {
     flex-basis: 100%;
     margin-bottom: 10px;
