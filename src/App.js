@@ -14,8 +14,6 @@ function App() {
   ]);
 
   const [taskCount, setTaskCount] = useState(tasks.length);
-  const taskDoneCount = tasks.filter(task => task.done === true).length;
-  const taskHideDoneCount = tasks.filter(task => task.done === true && hideDone === true).length;
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -63,7 +61,6 @@ function App() {
         body={<Form addNewTask={addNewTask} />} />
       <Section
         title={`Lista zadań (${taskCount})`}
-        subtitle={taskDoneCount > 0 ? `Ukończone: ${taskDoneCount}` : "Nie ukończono żadnego zadania!"}
         body={
           <Tasks
             tasks={tasks}
@@ -75,7 +72,6 @@ function App() {
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
-            subtitle={taskHideDoneCount > 0 ? `Zadań ukrytych: ${taskHideDoneCount}` : ""}
             toggleHideDone={toggleHideDone}
             setAllDone={setAllDone}
           />}
