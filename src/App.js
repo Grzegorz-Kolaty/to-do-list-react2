@@ -25,12 +25,11 @@ function App() {
   };
 
   const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done };
-      }
-      return task;
-    }));
+    setTasks(tasks => tasks.map(task =>
+    (task.id === id
+      ? { ...task, done: !task.done }
+      : task)
+    ))
   };
 
   const setAllDone = () => {
@@ -41,17 +40,15 @@ function App() {
   };
 
   const addNewTask = (content) => {
-    if (content.length > 0) {
-      setTasks(tasks => [
-        ...tasks,
-        {
-          content,
-          done: false,
-          id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-        }
-      ]);
-      setTaskCount(taskCount => taskCount + 1);
-    }
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+      }
+    ]);
+    setTaskCount(taskCount => taskCount + 1);
   };
 
   return (
@@ -79,6 +76,5 @@ function App() {
     </Container>
   );
 };
-
 
 export default App;
