@@ -7,7 +7,6 @@ const Form = ({ addNewTask }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const newTaskContentTrimmed = newTaskContent.trim();
-    console.log(typeof newTaskContentTrimmed, `${newTaskContentTrimmed}`);
     newTaskContentTrimmed !== "" && addNewTask(newTaskContentTrimmed);
     setNewTaskContent("");
   };
