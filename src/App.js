@@ -7,7 +7,9 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-  const [hideDone, setHideDone] = useState(false);
+  const [hideDone, setHideDone] = useState(
+    JSON.parse(localStorage.getItem("hideDone")) || false);
+
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) !== null
       ? JSON.parse(localStorage.getItem("tasks"))
@@ -16,7 +18,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+    localStorage.setItem("hideDone", JSON.stringify(hideDone))
+  }, [tasks, hideDone]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
