@@ -8,25 +8,15 @@ export const Sections = styled.section`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 39px 0px;
 `;
 
-export const Header = styled.header`
+export const Title = styled.h2`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 3px solid #eee;
   padding: 20px;
-`;
-
-export const Title = styled.h1`
   margin: 0px;
-  font-size: 20px;
-  flex-grow: 1;
-`;
-
-export const Subtitle = styled.h2`
-  font-weight: 400;
-  font-size: medium;
-  margin: 0px;
+  font-size: large;
 `;
 
 export const Body = styled.div`

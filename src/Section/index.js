@@ -1,12 +1,8 @@
-import { Sections, Header, Title, Subtitle, Body } from "./styled";
+import { Sections, Title, Body } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent, subtitle }) => (
   <Sections>
-    <Header>
-      <Title>{title}</Title>
-      <Subtitle><i>{subtitle}</i></Subtitle>
-      {extraHeaderContent}
-    </Header>
+    <Title>{title}{extraHeaderContent}</Title>
     <Body>
       {body}
     </Body>
