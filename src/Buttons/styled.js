@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap row;
   align-items: center;
   align-content: center;
   font-size: 15px;
 
   @media (max-width: 767px) {
+    margin-top: 20px;
     flex-direction: column;
     flex-basis: 100%;
   }
@@ -29,6 +30,6 @@ export const Button = styled.button`
   }
 
   @media (max-width: 767px) {
-    margin-top: 20px;
+    padding: 20px;
   }
 `;
