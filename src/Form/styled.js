@@ -7,8 +7,8 @@ export const Formular = styled.form`
 `;
 
 export const Input = styled.input`
-  border: 2px solid #eee;
-  padding: 10px;
+  border: 2px solid ${({ theme }) => theme.background.color};
+  padding: ${({theme}) => theme.spacingElements};
   flex-basis: 80%;
   transition: 100ms;
 
@@ -19,17 +19,17 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: teal;
-  color: white;
-  border: none;
-  transition: 300ms;
-  padding: 10px;
+  ${({ theme }) => theme.border};
+  ${({theme}) => theme.spacingElements};
+  background-color: ${({ theme }) => theme.background.colorTeal};
+  color: ${({ theme }) => theme.background.colorWhite};
+  transition: ${({ theme }) => theme.transition};
 
   @media (max-width: 767px) {
     flex-basis: 100%;
   }
 
   &:hover {
-    background-color: hsl(180, 100%, 30%);
+    background-color: ${({ theme }) => theme.background.colorTealBrighter};
   }
 `;

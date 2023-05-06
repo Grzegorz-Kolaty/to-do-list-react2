@@ -5,31 +5,29 @@ export const Wrapper = styled.div`
   flex-flow: wrap row;
   align-items: center;
   align-content: center;
-  font-size: 15px;
+  font-size: ${({ theme }) => theme.font.sizeNormal};
 
   @media (max-width: 767px) {
-    margin-top: 20px;
     flex-direction: column;
     flex-basis: 100%;
+    margin-top: 20px;
   }
 `;
 
 export const Button = styled.button`
-  background-color: transparent;
-  color: teal;
-  border: none;
-  transition: 200ms;
-  font-weight: 600;
+  color: ${({ theme }) => theme.background.colorTeal};
+  border: ${({ theme }) => theme.border};
+  background-color: ${({ theme }) => theme.background.transparent};
 
   &:hover {
-    color: hsl(180, 100%, 30%);
+    color: ${({ theme }) => theme.background.colorTealBrighter};
   }
 
   &:disabled {
-    color: grey;
+    color: ${({ theme }) => theme.font.colorDisabled};
   }
 
   @media (max-width: 767px) {
-    padding: 20px;
+    ${({ theme }) => theme.spacingBoxes}
   }
 `;

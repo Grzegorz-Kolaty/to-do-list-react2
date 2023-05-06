@@ -5,6 +5,6 @@ export const Main = styled.main`
   grid-template-rows: auto;
   grid-gap: 10px;
   max-width: 900px;
+  margin: 0px auto;
   padding: 20px;
-  margin: 0 auto;
 `;

@@ -12,8 +12,8 @@ export const Item = styled.li`
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 10px;
-  border-bottom: 2px solid #eee;
+  ${({theme}) => theme.spacingElements};
+  border-bottom: 2px solid ${({theme}) => theme.background.color};
 
   ${({ hidden }) => hidden && css`
     display: none;
@@ -30,12 +30,12 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-  background-color: green;
-  color: white;
-  border: none;
+  background-color: ${({theme}) => theme.background.colorGreen};
+  color: ${({theme}) => theme.font.colorWhite};
+  ${({ theme }) => theme.border};
+  ${({theme}) => theme.transition};
   width: 30px;
   height: 30px;
-  transition: 300ms;
   flex-shrink: 0;
 
   ${({ toggleDone }) => toggleDone && css`
