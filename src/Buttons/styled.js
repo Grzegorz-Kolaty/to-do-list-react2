@@ -5,7 +5,7 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.background.colorTeal};
   border: ${({ theme }) => theme.border};
   background-color: ${({ theme }) => theme.background.transparent};
-  min-width: 200px;
+  min-width: 180px;
   padding: 0px;
 
   &:hover {
