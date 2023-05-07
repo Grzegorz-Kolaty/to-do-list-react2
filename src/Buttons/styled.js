@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  min-width: 160px;
+  min-width: 200px;
   font-size: ${({ theme }) => theme.font.sizeNormal};
   color: ${({ theme }) => theme.background.colorTeal};
   border: ${({ theme }) => theme.border};
