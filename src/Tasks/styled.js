@@ -7,13 +7,12 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-gap: 15px;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  ${({theme}) => theme.spacingElements};
-  border-bottom: 2px solid ${({theme}) => theme.background.color};
+  ${({ theme }) => theme.spacingElements};
+  border-bottom: 2px solid ${({ theme }) => theme.background.color};
 
   ${({ hidden }) => hidden && css`
     display: none;
@@ -21,8 +20,7 @@ export const Item = styled.li`
 `;
 
 export const Content = styled.span`
-  flex-grow: 1;
-
+  word-break: break-all;
     ${({ done }) => done && css`
         text-decoration: line-through;
         text-decoration-thickness: 2px;
@@ -30,13 +28,12 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-  background-color: ${({theme}) => theme.background.colorGreen};
-  color: ${({theme}) => theme.font.colorWhite};
+  background-color: ${({ theme }) => theme.background.colorGreen};
+  color: ${({ theme }) => theme.font.colorWhite};
   ${({ theme }) => theme.border};
-  ${({theme}) => theme.transition};
+  ${({ theme }) => theme.transition};
   width: 30px;
   height: 30px;
-  flex-shrink: 0;
 
   ${({ toggleDone }) => toggleDone && css`
     background-color: hsl(120, 61%, 34%);
