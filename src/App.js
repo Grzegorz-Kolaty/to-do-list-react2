@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { useTasks } from "./useTasks";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -9,14 +10,6 @@ import Container from "./Container";
 function App() {
   const [hideDone, setHideDone] = useState(
     JSON.parse(localStorage.getItem("hideDone")) || false);
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || []);
-  const [taskCount, setTaskCount] = useState(tasks.length);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
   useEffect(() => {
     localStorage.setItem("hideDone", JSON.stringify(hideDone))
   }, [hideDone]);
@@ -25,37 +18,13 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
-    setTaskCount(taskCount => taskCount - 1);
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task =>
-    (task.id === id
-      ? { ...task, done: !task.done }
-      : task)
-    ))
-  };
-
-  const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({
-      ...task,
-      done: true
-    })));
-  };
-
-  const addNewTask = (content) => {
-    setTasks(tasks => [
-      ...tasks,
-      {
-        content,
-        done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      }
-    ]);
-    setTaskCount(taskCount => taskCount + 1);
-  };
+  const {
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    addNewTask,
+  } = useTasks();
 
   return (
     <Container>
@@ -63,7 +32,7 @@ function App() {
       <Section title="Dodaj nowe zadanie"
         body={<Form addNewTask={addNewTask} />} />
       <Section
-        title={`Lista zadań (${taskCount})`}
+        title={`Lista zadań (${tasks.length})`}
         body={
           <Tasks
             tasks={tasks}
