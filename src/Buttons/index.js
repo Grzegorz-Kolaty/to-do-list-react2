@@ -1,4 +1,4 @@
-import { Wrapper, Button } from "./styled";
+import { Button } from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
   const taskUnDoneCount = tasks.filter(task => task.done === false).length;
@@ -6,7 +6,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
 
   return (
     tasks.length > 0 && (
-      <Wrapper>
+      <>
         <Button
           onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
@@ -18,7 +18,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
           Ukończ wszystkie
           {taskUnDoneCount > 0 ? ` (${taskUnDoneCount})` : ""}
         </Button>
-      </Wrapper>
+      </>
     )
   )
 };

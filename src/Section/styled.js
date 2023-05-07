@@ -6,16 +6,15 @@ export const Sections = styled.section`
 `;
 
 export const Title = styled.h2`
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
   align-items: center;
   font-size: ${({ theme }) => theme.font.sizeLarge};
   ${({ theme }) => theme.spacingBoxes};
   border-bottom: 3px solid ${({ theme }) => theme.background.color};
 
   @media (max-width: 767px) {
-    justify-content: center;
+    grid-template-columns: auto;
   }
 `;
 
