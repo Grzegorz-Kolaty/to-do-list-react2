@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  min-width: 200px;
   font-size: ${({ theme }) => theme.font.sizeNormal};
   color: ${({ theme }) => theme.background.colorTeal};
   border: ${({ theme }) => theme.border};
   background-color: ${({ theme }) => theme.background.transparent};
+  min-width: 200px;
+  padding: 0px;
 
   &:hover {
     color: ${({ theme }) => theme.background.colorTealBrighter};
