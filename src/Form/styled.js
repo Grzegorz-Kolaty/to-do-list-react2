@@ -12,7 +12,7 @@ export const Formular = styled.form`
 
 export const Datafield = styled.div`
   ${({ theme }) => theme.spacingElements};
-  height: 40px;
+  min-height: 40px;
 
   ${({ button }) => button && css`
   color: ${({ theme }) => theme.font.colorWhite};
