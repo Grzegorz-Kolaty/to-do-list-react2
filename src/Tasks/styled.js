@@ -28,26 +28,21 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.background.colorGreen};
   color: ${({ theme }) => theme.font.colorWhite};
   ${({ theme }) => theme.border};
-  ${({ theme }) => theme.transition};
+  transition: ${({ theme }) => theme.transition};
   width: 30px;
   height: 30px;
 
-  ${({ toggleDone }) => toggleDone && css`
-    background-color: hsl(120, 61%, 34%);
+  &:hover {
+      filter: brightness(120%);
+    }
+`;
 
-    &:hover {
-      background-color: hsl(120, 61%, 39%);
-      }
-    `}
+export const ToggleDoneButton = styled(Button)`
+    background-color: ${({ theme }) => theme.background.colorGreen};
+`;
 
-    ${({ remove }) => remove && css`
-      background-color: hsl(348, 83%, 47%);
-
-      &:hover {
-      background-color: hsl(348, 83%, 53%);
-      }
-    `}
+export const RemoveTaskButton = styled(Button)`
+    background-color: ${({ theme }) => theme.background.colorCrimson};
 `;
