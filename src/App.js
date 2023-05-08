@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useTasks } from "./useTasks";
 import Form from "./Form";
 import Tasks from "./Tasks";
@@ -8,22 +7,15 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-  const [hideDone, setHideDone] = useState(
-    JSON.parse(localStorage.getItem("hideDone")) || false);
-  useEffect(() => {
-    localStorage.setItem("hideDone", JSON.stringify(hideDone))
-  }, [hideDone]);
-
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
-  };
-
   const {
     tasks,
     removeTask,
     toggleTaskDone,
     setAllDone,
     addNewTask,
+    hideDone,
+    toggleHideDone,
+    taskCount
   } = useTasks();
 
   return (
@@ -32,7 +24,7 @@ function App() {
       <Section title="Dodaj nowe zadanie"
         body={<Form addNewTask={addNewTask} />} />
       <Section
-        title={`Lista zadań (${tasks.length})`}
+        title={`Lista zadań (${taskCount})`}
         body={
           <Tasks
             tasks={tasks}
