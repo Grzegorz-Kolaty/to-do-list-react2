@@ -9,7 +9,7 @@ export const Button = styled.button`
   padding: 0px;
 
   &:hover {
-    color: ${({ theme }) => theme.background.colorTealBrighter};
+    filter: brightness(120%)
   }
 
   &:disabled {
