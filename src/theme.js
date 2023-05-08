@@ -13,7 +13,7 @@ export const theme = {
         colorWhite: "white",
         colorTeal: "teal",
         colorGreen: "green",
-        colorTealBrighter: "hsl(180, 100%, 30%)",
+        colorCrimson: "crimson",
         transparent: "transparent"
     },
 
