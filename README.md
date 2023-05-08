@@ -23,7 +23,7 @@ Currency converter 👆 https://grzegorz-kolaty.github.io/currency-converter-rea
 - CSS,
 - BEM,
 - Flex, Grid, OpenGraph, Styled Components
-- JavaScript,
+- JavaScript, Custom React Hooks
 - ES6+ features,
 - projects are DesktopFirst (not MobileFirst) but completly adjusted for smartphones!
 
