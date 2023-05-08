@@ -1,0 +1,36 @@
+export const theme = {
+    font: {
+        colorBlack: "black",
+        colorWhite: "white",
+        colorDisabled: "grey",
+        button: "white",
+        sizeLarge: "large",
+        sizeNormal: "medium"
+    },
+
+    background: {
+        color: "#eee",
+        colorWhite: "white",
+        colorTeal: "teal",
+        colorGreen: "green",
+        colorTealBrighter: "hsl(180, 100%, 30%)",
+        transparent: "transparent"
+    },
+
+    spacingBoxes: {
+        padding: "20px",
+        margin: "0px"
+    },
+
+    spacingElements: {
+        padding: "10px",
+        margin: "0px"
+    },
+
+    border: {
+        outline: "none",
+        border: "none"
+    },
+
+    transition: "300ms"
+};
