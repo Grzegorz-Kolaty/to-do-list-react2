@@ -1,4 +1,4 @@
-# Task List with YouCode!
+# Task List with Redux!
 
 ## 💪 To do list - how to use❔
 
@@ -19,9 +19,7 @@ Currency converter 👆 https://grzegorz-kolaty.github.io/currency-converter-rea
 
 ## ⚙ Used technologies and languages
 
-- HTML,
-- CSS,
-- BEM,
+- HTML, CSS, BEM, Redux
 - Flex, Grid, OpenGraph, Styled Components
 - JavaScript, Custom React Hooks
 - ES6+ features,
