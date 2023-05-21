@@ -10,7 +10,6 @@ import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
   const { tasks } = useSelector(selectTasks);
-  console.log(tasks);
 
   return (
     <Container>
