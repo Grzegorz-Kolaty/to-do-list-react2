@@ -7,7 +7,7 @@ export const Sections = styled.section`
 
 export const Title = styled.h2`
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 3fr auto;
   align-items: center;
   font-size: ${({ theme }) => theme.font.sizeLarge};
   ${({ theme }) => theme.spacingBoxes};
