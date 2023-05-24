@@ -10,7 +10,7 @@ const Buttons = () => {
 
   return (
     <Wrapper>
-      <Button onClick={() => fetchExampleTasks()}>
+      <Button onClick={() => dispatch(fetchExampleTasks())}>
         Pobierz przykdowe zadania
       </Button>
 
@@ -23,7 +23,7 @@ const Buttons = () => {
           <Button
             onClick={() => dispatch(setAllDone())}
             disabled={tasks.every((task) => task.done)}>
-            Ukończ wszystkie {taskUnDoneCount > 0 ? `(${taskUnDoneCount})` : ""}
+            Ukończ wszystkie {taskUnDoneCount > 0 ? ` (${taskUnDoneCount})` : ""}
           </Button>
         </>
       )}
