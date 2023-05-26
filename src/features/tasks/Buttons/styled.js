@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 0px;
   margin: 0px;
-`
+`;
 
 export const Button = styled.button`
   font-size: ${({ theme }) => theme.font.sizeNormal};
