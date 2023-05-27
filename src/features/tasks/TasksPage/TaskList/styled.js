@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+
 
 export const List = styled.ul`
   list-style: none;
@@ -21,10 +23,14 @@ export const Item = styled.li`
 
 export const Content = styled.span`
   word-break: break-all;
-    ${({ done }) => done && css`
-        text-decoration: line-through;
-        text-decoration-thickness: 2px;
-    `}
+  ${({ done }) => done && css`
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  `}
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export const Button = styled.button`
@@ -35,14 +41,14 @@ export const Button = styled.button`
   height: 30px;
 
   &:hover {
-      filter: brightness(120%);
-    }
+    filter: brightness(120%);
+  }
 `;
 
 export const ToggleDoneButton = styled(Button)`
-    background-color: ${({ theme }) => theme.background.colorGreen};
+  background-color: ${({ theme }) => theme.background.colorGreen};
 `;
 
 export const RemoveTaskButton = styled(Button)`
-    background-color: ${({ theme }) => theme.background.colorCrimson};
+  background-color: ${({ theme }) => theme.background.colorCrimson};
 `;

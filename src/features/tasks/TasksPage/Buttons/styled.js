@@ -12,8 +12,8 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.background.transparent};
   padding: 10px;
 
-  &:hover {
-    filter: brightness(120%)
+  &:not(:disabled):hover {
+    filter: brightness(140%);
   }
 
   &:disabled {
