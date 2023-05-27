@@ -10,12 +10,6 @@ export const Formular = styled.form`
   }
 `;
 
-export const Input = styled.input`
-  ${({ theme }) => theme.spacingElements};
-  border: 2px solid ${({ theme }) => theme.background.color};
-  min-height: 40px;
-`;
-
 export const Button = styled.button`
   ${({ theme }) => theme.spacingElements};
   ${({ theme }) => theme.border}

@@ -18,7 +18,7 @@ const Buttons = () => {
   return (
     <Wrapper>
       <Button onClick={() => dispatch(fetchExampleTasks())}>
-        Pobierz przykdowe zadania
+        Pobierz przykładowe zadania
       </Button>
 
       {tasks.length > 0 && (
