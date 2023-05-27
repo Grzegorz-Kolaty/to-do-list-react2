@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import Form from "../TasksPage/Form";
 import TaskList from "../TasksPage/TaskList";
-import Buttons from "../TasksPage/Buttons";
+import Button from "./Button";
+import Buttons from "./Buttons"
 import Search from "./Search";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
@@ -17,6 +18,7 @@ function TasksPage() {
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
+        extraHeaderContent={<Button />}
       />
 
       <Section

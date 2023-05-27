@@ -6,10 +6,9 @@ import {
   setAllDone,
   selectTasksHideDone,
   selectTasksToDo,
-  fetchExampleTasks
 } from "../../tasksSlice";
 
-const Buttons = () => {
+function Buttons() {
   const { tasks, hideDone } = useSelector(selectTasksState);
   const taskHideDoneCount = useSelector(selectTasksHideDone);
   const taskUnDoneCount = useSelector(selectTasksToDo);
@@ -17,10 +16,6 @@ const Buttons = () => {
 
   return (
     <Wrapper>
-      <Button onClick={() => dispatch(fetchExampleTasks())}>
-        Pobierz przykładowe zadania
-      </Button>
-
       {tasks.length > 0 && (
         <>
           <Button onClick={() => dispatch(toggleHideDone())}>
