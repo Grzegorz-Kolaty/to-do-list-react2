@@ -1,6 +1,7 @@
-import { BrowserRouter, Link, Switch, Route, Redirect, useParams } from "react-router-dom/cjs/react-router-dom.min";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import TasksPage from "./features/tasks/TasksPage/index";
+import AuthorPage from "./features/author/AuthorPage";
+import TaskPage from "./features/tasks/TaskPage/index";
 
 function App() {
   return (
@@ -15,11 +16,14 @@ function App() {
           </li>
         </ul>
         <Switch>
+          <Route path="/zadania/:id">
+            <TaskPage />
+          </Route>
           <Route path="/zadania">
-            <Tasks />
+            <TasksPage />
           </Route>
           <Route path="/author">
-            <Author />
+            <AuthorPage />
           </Route>
           <Route path="/">
             <Redirect to="/zadania" />

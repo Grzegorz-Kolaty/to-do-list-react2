@@ -1,15 +1,14 @@
 import { useSelector } from "react-redux";
-import Form from "./Form";
-import TaskList from "./TaskList";
-import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import { Container } from "../../common/Container/styled";
-import { selectTasks } from "./tasksSlice";
+import Form from "../TasksPage/Form";
+import TaskList from "../TasksPage/TaskList";
+import Buttons from "../TasksPage/Buttons";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import { Container } from "../../../common/Container/styled";
+import { selectTasks } from "../tasksSlice";
 
-function Tasks() {
+function TasksPage() {
   const tasks = useSelector(selectTasks);
-
   return (
     <Container>
       <Header title="Lista zadań" />
@@ -24,4 +23,4 @@ function Tasks() {
   );
 };
 
-export default Tasks;
+export default TasksPage;

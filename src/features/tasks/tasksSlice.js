@@ -42,7 +42,11 @@ export const {
     setTasks
 } = tasksSlice.actions;
 export const selectTasksState = state => state.tasks;
+
 export const selectTasks = state => selectTasksState(state).tasks;
 export const selectTasksHideDone = state => selectTasks(state).filter(task => task.done === true).length
 export const selectTasksToDo = state => selectTasks(state).filter(task => task.done === false).length;
+
+export const getTaskById = (state, taskId) => selectTasks(state).find(({ id }) => id === taskId);
+
 export default tasksSlice.reducer;
