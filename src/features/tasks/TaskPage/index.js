@@ -8,6 +8,19 @@ import { getTaskById } from "../tasksSlice";
 function TaskPage() {
   const { id } = useParams();
   const task = useSelector(state => getTaskById(state, id))
+
+  if (!task) {
+    return (
+      <Container>
+        <Header title="Szczegóły zadania" />
+        <Section
+          title="Nie znaleziono takiego zadania"
+          body="Sprawdź poprawność ID zadania."
+        />
+      </Container>
+    );
+  };
+
   return (
     <Container>
       <Header title="Szczegóły zadania" />
