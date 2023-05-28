@@ -1,10 +1,11 @@
 import { Button, Wrapper } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExampleTasks } from "../../tasksSlice";
+import { fetchExampleTasks, selectTasksState } from "../../tasksSlice";
 
 function ExampleTasks() {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.tasks.isLoading);
+  const tasksState = useSelector(selectTasksState);
+  const { isLoading, error } = tasksState;
 
   return (
     <Wrapper>
@@ -12,10 +13,14 @@ function ExampleTasks() {
         onClick={() => dispatch(fetchExampleTasks())}
         disabled={isLoading}
       >
-        {isLoading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+        {isLoading
+          ? "Ładowanie..."
+          : error
+            ? "Błąd pobierania"
+            : "Pobierz przykładowe dane"}
       </Button>
     </Wrapper>
   )
-};
+}
 
 export default ExampleTasks;
