@@ -1,15 +1,17 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import Input from "../../Input"
-import useLocationTasks from "../TaskList/useLocationTasks"
 import { Wrapper } from "./styled";
 import searchQueryParamName from "../../searchQueryParamName";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function Search() {
-  const { query, pathname, search } = useLocationTasks();
+  const location = useLocation(searchQueryParamName);
+  const query =
+    (new URLSearchParams(location.search)).get(searchQueryParamName);
   const history = useHistory();
 
   const onInputChange = ({ target }) => {
-    const newQuery = new URLSearchParams(search);
+    const newQuery = new URLSearchParams(location.search);
     // .set na query ktory jest niemutowalny wymaga utworzenia nowego query
 
     if (target.value.trim() === "") {
@@ -18,7 +20,7 @@ function Search() {
       newQuery.set(searchQueryParamName, target.value);
     }
 
-    history.push(`${pathname}?${newQuery.toString()}`);
+    history.push(`${location.pathname}?${newQuery.toString()}`);
   }
 
   return (
