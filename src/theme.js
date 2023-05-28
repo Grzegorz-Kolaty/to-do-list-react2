@@ -3,6 +3,7 @@ export const theme = {
         colorBlack: "black",
         colorWhite: "white",
         colorDisabled: "grey",
+        colorTeal: "teal",
         button: "white",
         sizeLarge: "large",
         sizeNormal: "medium"
