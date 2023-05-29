@@ -5,7 +5,7 @@ import searchQueryParamName from "../../searchQueryParamName";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function Search() {
-  const location = useLocation(searchQueryParamName);
+  const location = useLocation();
   const query =
     (new URLSearchParams(location.search)).get(searchQueryParamName);
   const history = useHistory();

@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import searchQueryParamName from "../../searchQueryParamName";
 
 const TaskList = () => {
-  const location = useLocation(searchQueryParamName);
+  const location = useLocation();
   const query =
     (new URLSearchParams(location.search)).get(searchQueryParamName);
   const tasks = useSelector(state => selectTasksByQuery(state, query));
