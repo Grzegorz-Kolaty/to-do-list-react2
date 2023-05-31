@@ -1,4 +1,4 @@
-import { Button, Wrapper } from "./styled";
+import { Button, Wrapper } from "../../Buttons/styled";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectTasksState } from "../../tasksSlice";
 
