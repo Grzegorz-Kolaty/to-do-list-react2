@@ -6,7 +6,7 @@ import { Nav, List, Item, StyledNavLink } from "./styled";
 
 function App() {
   return (
-    <BrowserRouter basename="/to-do-list-react2">
+    <BrowserRouter basename="/to-do-list-react2/">
       <Nav>
         <List>
           <Item>
