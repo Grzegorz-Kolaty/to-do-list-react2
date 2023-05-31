@@ -16,6 +16,9 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     ${({ theme }) => theme.spacingBoxes};
+    &:hover {
+        box-shadow: inset 0px 7px 73px -30px rgba(95, 212, 191, 100);  
+    }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -24,5 +27,5 @@ export const StyledNavLink = styled(NavLink)`
 
     &.active {
         font-weight: bold;
-    }
+    };
 `;
