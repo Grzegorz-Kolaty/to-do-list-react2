@@ -19,7 +19,9 @@ Currency converter 👆 https://grzegorz-kolaty.github.io/currency-converter-rea
 
 ## ⚙ Used technologies and languages
 
-- HTML, CSS, BEM, Redux
+- HTML, CSS, BEM, Redux-Saga
+- Local Storage imports, exports
+- React Router - it's single page app!
 - Flex, Grid, OpenGraph, Styled Components
 - JavaScript, Custom React Hooks
 - ES6+ features,
