@@ -30,9 +30,6 @@ function App() {
         <Route path="/">
           <Redirect to="/zadania" />
         </Route>
-        <Route path="*">
-          <Redirect to="/zadania" />
-        </Route>
       </Switch>
     </HashRouter>
   );
