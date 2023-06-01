@@ -7,17 +7,16 @@ export const Nav = styled.nav`
 `;
 
 export const List = styled.ul`
-    ${({ theme }) => theme.spacingElements};
     display: flex;
     flex-flow: row wrap-reverse;
     justify-content: center;
     list-style: none;
+    margin: 0px;
 `;
 
 export const Item = styled.li`
     display: flex;
     justify-content: center;
-    min-height: 50px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -27,9 +26,6 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
 
     &.active {
-        font-weight: bold;
-    };
-    &:hover {
-        box-shadow: inset 0px 7px 73px -30px rgba(95, 212, 191, 100);  
+        border-bottom: 3px solid hsl(180, 100%, 35.1%);
     }
 `;
