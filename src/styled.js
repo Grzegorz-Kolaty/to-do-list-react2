@@ -27,5 +27,6 @@ export const StyledNavLink = styled(NavLink)`
 
     &.active {
         border-bottom: 3px solid hsl(180, 100%, 35.1%);
+        font-weight: bold;
     }
 `;
