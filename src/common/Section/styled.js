@@ -8,6 +8,7 @@ export const Sections = styled.section`
 export const Title = styled.h2`
   display: grid;
   grid-template-columns: 1fr auto;
+  min-height: 70px;
   min-width: 150px;
   align-items: center;
   font-size: ${({ theme }) => theme.font.sizeLarge};

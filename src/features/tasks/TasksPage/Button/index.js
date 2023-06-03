@@ -1,4 +1,4 @@
-import { Button, Wrapper } from "../../Buttons/styled";
+import { Button, Loader, Wrapper } from "../../Buttons/styled";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectTasksState } from "../../tasksSlice";
 
@@ -9,16 +9,15 @@ function ExampleTasks() {
 
   return (
     <Wrapper>
-      <Button
-        onClick={() => dispatch(fetchExampleTasks())}
-        disabled={isLoading}
-      >
-        {isLoading
-          ? "Ładowanie..."
-          : error
-            ? "Błąd pobierania"
-            : "Pobierz przykładowe dane"}
-      </Button>
+      {isLoading
+        ? <Loader />
+        : <Button
+          onClick={() => dispatch(fetchExampleTasks())}
+          disabled={isLoading}
+        >
+          {error ? `${error}` : "Pobierz przykładowe zadania"}
+        </Button>
+      }
     </Wrapper>
   )
 }
